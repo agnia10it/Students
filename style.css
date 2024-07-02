@@ -1,0 +1,100 @@
+.container {
+  width: 1200px;
+  margin: 50px auto;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.top {
+  display: flex;
+  gap: 30px;
+}
+
+.subtitle {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.input {
+  width: 90%;
+  padding: 2px 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+
+.form__input {
+  width: auto;
+}
+
+.btn {
+  margin-bottom: 30px;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 15px;
+}
+
+.btn:not(:last-of-type) {
+  margin-right: 15px;
+}
+
+.table {
+  margin: 0;
+  margin-bottom: 50px;
+  width: 100%;
+  border-spacing: 0;
+  border: 1px solid #000;
+}
+
+.thead__th {
+  padding: 5px;
+  font-size: 24px;
+  border: 1px solid #000;
+}
+
+.tbody__td {
+  padding: 8px;
+  max-width: 20%;
+  font-size: 20px;
+  border: 1px solid #000;
+}
+
+.tbody__td_num {
+  max-width: 5%;
+}
+
+.tbody__td_fio {
+  max-width: 40%;
+}
+
+.error-message {
+  display: block;
+  width: 90%;
+  padding: 2px 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12px;
+  color: red;
+}
+
+.table_img {
+  padding-left: 40px;
+  width: 20px;
+  height: 20px;
+}
+
+/*
+
+*/

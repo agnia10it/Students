@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список студентов</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script defer src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      createStudentListApp();
+    });
+
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title">Список студентов</h1>
+    <button class="btn" id="start-btn">Загрузить список по умолчанию</button>
+    <button class="btn" id="clean-btn">Очистить список</button>
+    <div class="top">
+      <div class="filters">
+        <h2 class="subtitle">Фильтры</h2>
+        <label class="label">
+          Поиск по ФИО:
+          <input class="input" type="text" name="fio" id="filter__fio" placeholder="Введите строку">
+        </label>
+        <label class="label">
+          Поиск по факультету:
+          <input class="input" type="text" name="department" id="filter__depart" placeholder="Введите строку">
+        </label>
+        <label class="label">
+          Поиск по году поступления:
+          <input class="input" type="number" name="year_start" id="filter__yearstart"
+            placeholder="Введите год поступления">
+        </label>
+        <label class="label">
+          Поиск по году окончания обучения:
+          <input class="input" type="number" name="year_fin" id="filter__yearfin"
+            placeholder="Введите год окончания обучения">
+        </label>
+        <button class="btn" id="off-filter-btn">Очистить фильтры</button>
+      </div>
+      <div class="add">
+        <h2 class="subtitle">Добавить студента</h2>
+        <form class="form" id="input_form">
+          <label class="label">
+            Имя:
+            <input class="input form__input" type="text" name="name" id="input_name" placeholder="Введите имя">
+          </label>
+          <label class="label">
+            Фамилия:
+            <input class="input form__input" type="text" name="surname" id="input_surname"
+              placeholder="Введите фамилию">
+          </label>
+          <label class="label">
+            Отчество:
+            <input class="input form__input" type="text" name="patronymic" id="input_patron"
+              placeholder="Введите отчество">
+          </label>
+          <label class="label">
+            Дата рождения:
+            <input class="input form__input" type="date" name="b_day" id="input_b_day" placeholder="Введите дату рождения">
+          </label>
+          <label class="label">
+            Год начала обучения:
+            <input class="input form__input" type="number" name="year_start" id="input_year_start" placeholder="2024">
+          </label>
+          <label class="label">
+            Факультет:
+            <input class="input form__input" type="text" name="department" id="input_department"
+              placeholder="Введите факультет">
+          </label>
+          <button class="btn" type="submit" id="add_student">Добавить студента</button>
+          <button class="btn" id="clear-form-btn">Очистить форму</button>
+
+        </form>
+      </div>
+    </div>
+
+    <table class="table" id="student_table">
+      <thead class="table__head thead">
+        <tr class="thead__tr">
+          <th class="thead__th" id="num_th">№ п/п</th>
+          <th class="thead__th" id="fio_th">ФИО студента</th>
+          <th class="thead__th" id="department_th">Факультет</th>
+          <th class="thead__th" id="bday_th">Дата рождения и возраст</th>
+          <th class="thead__th" id="years_th">Годы обучения</th>
+          <th class="thead__th" id="del_th">Удалить</th>
+        </tr>
+      </thead>
+
+      <tbody id="tbody" class="table__body tbody">
+      </tbody>
+    </table>
+
+
+  </div>
+</body>
+
+</html>
